@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tic-Tac-Toe</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" type="text/css" href="style.css" />
+
+	<script src="algo.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="jumbotron">
+		  <h1>Tic-Tac-Toe</h1>
+		  <p>The object of Tic Tac Toe is to get three in a row. You play on a three by three game board. The first player is known as X and the second is O. Players alternate placing Xs and Os on the game board until either oppent has three in a row or all nine squares are filled. X always goes first, and in the event that no one has three in a row, the stalemate is called a cat game.</p>
+		  <p><button class="btn btn-success btn-lg">Start <span class="glyphicon glyphicon-play" aria-hidden="true"></span></button></p>
+		</div>
+		<br>
+		<p class="alert alert-info" style="text-align: center; font-weight: bold;" hidden>Game Started!<br>Player X's turn...</p>
+		<br>
+		<table hidden>
+			<tr>
+				<td id="c11" align="center"></td>
+				<td id="c12" align="center"></td>
+				<td id="c13" align="center"></td>
+			</tr>
+			<tr>
+				<td id="c21" align="center"></td>
+				<td id="c22" align="center"></td>
+				<td id="c23" align="center"></td>
+			</tr>
+			<tr>
+				<td id="c31" align="center"></td>
+				<td id="c32" align="center"></td>
+				<td id="c33" align="center"></td>
+			</tr>
+		</table>
+		<br>
+		<div class="row panel panel-default" style="text-align: center;" hidden>
+			<div id="player1" class="col-md-4 panel-heading" style="font-size: 20px; color: #ff0000; font-family: 'Corbel'; font-weight: bold; text-shadow: 1px 1px 2px black;">Player X : <br><span style="font-family: 'Arial Black'; font-size: 30px; text-shadow: none;">0</span></div>
+			
+			<div class="col-md-4 panel-heading" style="font-size: 50px; font-family: 'Mistral'; font-weight: bold; text-shadow: 1px 1px 2px;">SCORE</div>
+			
+			<div id="player2" class="col-md-4 panel-heading" style="font-size: 20px; color: #00ff00; font-family: 'Corbel'; font-weight: bold; text-shadow: 1px 1px 2px black;">Player O : <br><span style="font-family: 'Arial Black'; font-size: 30px; text-shadow: none;">0</span></div>
+		</div>
+	</div>
+</body>
+</html>
