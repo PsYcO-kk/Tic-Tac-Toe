@@ -9,7 +9,6 @@ $(document).ready(function(){
 		var score2=0;
 
 		$('.alert').slideDown();
-		$('#player1').prepend("<img src='load.gif' width='20px'> ");
 
 		$('td').click(function(){
 			if(i%2!=0){

@@ -1,7 +1,36 @@
+body{
+	font-family: sans-serif;
+}
+.container{
+	background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+	margin: 10px 15% 10px 15%;
+	padding: 10px;
+	border: 2px solid;
+	box-shadow: 1px 1px 10px;
+}
+.jumbotron{
+	padding: 15px;
+}
+.jumbotron p{
+	font-family: Calibri;
+	font-style: italic;
+	padding-bottom: 10px;
+}
+button{
+	color: #ffffff;
+	background-color: #4CAF50;
+	font-size: 200%;
+	padding: 10px 7.5% 10px 7.5%;
+	border: none;
+}
+button:hover{
+	cursor: pointer;
+}
 table,
 tr,
 td {
     border: 5px solid black;
+    cursor: pointer;
 }
 
 table {
