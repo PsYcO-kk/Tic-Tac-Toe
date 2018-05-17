@@ -9,6 +9,9 @@ $(document).ready(function(){
 		var score2=0;
 
 		$('.alert').slideDown();
+		if(!$('#player1').find('img').length){
+			$('#player1').prepend("<img src='load.gif' width='20px'> ");
+		}
 
 		$('td').click(function(){
 			if(i%2!=0){
@@ -51,6 +54,9 @@ $(document).ready(function(){
 					$('.alert').text('Player O won the game.');
 					$('.alert').append('<br>Wait! Game is Restarting...');
 				}
+				else{
+					$('.alert').append('<br>Wait! Game is Restarting...');
+				}
 				$('#player1 span').text(score1);
 				$('#player2 span').text(score2);				
 				i=1;
@@ -82,7 +88,9 @@ function reset(){
 	$('.alert').text('Game Started!');
 	$('.alert').append('<br>Player X\'s turn...');
 	$('.alert').slideDown();
-	$('#player1').prepend("<img src='load.gif' width='20px'> ");
+	if(!$('#player1').find('img').length){
+		$('#player1').prepend("<img src='load.gif' width='20px'> ");
+	}
 	var td = $('td');
 	td.each(function(index){
 		$(this).empty();
