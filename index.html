@@ -2,49 +2,97 @@
 <html>
 <head>
 	<title>Tic-Tac-Toe</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<script src="external/jquery-3.2.1.min.js"></script>
 
-	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="stylesheet" href="style.css" />
 
-<!-- 	<script src="mp.js"></script> -->
-	<script src="sp.js"></script>
+	<script src="app.js"></script>
 </head>
 <body>
-	<div class="container">
-		<div class="jumbotron">
-		  <h1 style="text-align: center;">Tic-Tac-Toe</h1>
-		  <p>The object of Tic Tac Toe is to get three in a row. You play on a three by three game board. The first player is known as X and the second is O. Players alternate placing Xs and Os on the game board until either oppent has three in a row or all nine squares are filled. X always goes first, and in the event that no one has three in a row, the stalemate is called a cat game.</p>
-		  <p align="center"><button class="btn btn-success btn-lg">Start</button></p>
-		</div>
-		<br>
-		<p class="alert alert-info" style="text-align: center; font-weight: bold;" hidden>Game Started!<br>Player X's turn...</p>
-		<br>
-		<table hidden>
-			<tr>
-				<td id="c11" align="center"></td>
-				<td id="c12" align="center"></td>
-				<td id="c13" align="center"></td>
-			</tr>
-			<tr>
-				<td id="c21" align="center"></td>
-				<td id="c22" align="center"></td>
-				<td id="c23" align="center"></td>
-			</tr>
-			<tr>
-				<td id="c31" align="center"></td>
-				<td id="c32" align="center"></td>
-				<td id="c33" align="center"></td>
-			</tr>
-		</table>
-		<br>
-		<div class="row" style="text-align: center;" hidden>
-			<div id="player1" style="width: 33%; font-size: 20px; color: #ff0000; font-family: 'Corbel'; font-weight: bold; text-shadow: 1px 1px 2px black;">Player X : <br><span style="font-family: 'Arial Black'; font-size: 30px; text-shadow: none;">0</span></div>
-			
-			<div style="width: 33%; font-size: 50px; font-family: 'Mistral'; font-weight: bold; text-shadow: 1px 1px 2px;">SCORE</div>
-			
-			<div id="player2" style="width: 33%; font-size: 20px; color: #00ff00; font-family: 'Corbel'; font-weight: bold; text-shadow: 1px 1px 2px black;">Player O : <br><span style="font-family: 'Arial Black'; font-size: 30px; text-shadow: none;">0</span></div>
+
+	<div id="menu" class="modal">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h2>Tic-Tac-Toe</h2>
+			</div>
+			<div class="modal-body">
+				<div id="options">
+					<div>
+						<button id="spBtn">Player VS Computer</button>
+					</div>
+					<div>
+						<button id="mpBtn">Player VS Player</button>
+					</div>
+					<div>
+						<button id="infoBtn">How to Play</button>
+					</div>
+				</div>
+				<div class="sp-level">
+					<button class="back">Go Back</button>
+					<div>
+						<button id="m-levelBtn">Medium Level</button>
+					</div>
+					<div>
+						<button id="h-levelBtn">Hard Level</button>
+					</div>
+				</div>
+				<div class="info">
+					<button class="back">Go Back</button>
+					<div>
+						The object of Tic Tac Toe is to get three in a row. You play on a three by three game board. The first player is known as X and the second is O. Players alternate placing Xs and Os on the game board until either oppent has three in a row or all nine squares are filled. X always goes first, and in the event that no one has three in a row, the stalemate is called a cat game.
+					</div>
+				</div>
+				<div class="greeting">sgregregergregregre</div>
+			</div>
+			<div class="modal-footer">
+				<h3><em>Created By KK</em></h3>
+			</div>
 		</div>
 	</div>
+
+ 	<div>
+ 		<div class="header">
+	 		<h1>Tic-Tac-Toe</h1>
+ 		</div>
+		<div class="row">
+			<div class="item1">
+				<div id="player1" class="player">
+					<span id="player1name">Player X</span> : 
+					<div class="score">
+						0
+					</div>
+				</div>
+			</div>
+			<div class="item2">
+				<table>
+					<tr>
+						<td id="c11"></td>
+						<td id="c12"></td>
+						<td id="c13"></td>
+					</tr>
+					<tr>
+						<td id="c21"></td>
+						<td id="c22"></td>
+						<td id="c23"></td>
+					</tr>
+					<tr>
+						<td id="c31"></td>
+						<td id="c32"></td>
+						<td id="c33"></td>
+					</tr>
+				</table>
+			</div>
+			<div class="item3">
+				<div id="player2" class="player">
+					<span id="player2name">Player O</span> : 
+					<div class="score">
+						0
+					</div>
+				</div>
+			</div>
+		</div>
+ 	</div>
 </body>
 </html>
